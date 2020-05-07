@@ -400,7 +400,9 @@ function PatientDB(props) {
                   {filters.detecteddistrict.length > 0
                     ? ` ${filters.detecteddistrict}, `
                     : ''}
-                  {' ' + filters.detectedstate}
+                  {filters.detecteddistrict.length > 0
+                    ? ` ${filters.detecteddistrict} `
+                    : ' Any States'}
                 </span>{' '}
                 on <span>{filters.dateannounced}.</span>
               </h5>
