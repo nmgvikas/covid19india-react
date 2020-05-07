@@ -97,10 +97,10 @@ function PatientDB(props) {
     if (filterByObject(patients, filters).length > 0) {
       setFilteredPatients(filterByObject(patients, filters));
       setMessage(false);
-      setLoading(false);
     } else {
       setMessage(true);
     }
+    setLoading(false);
   }, [patients, filters]);
 
   function getSortedValues(obj, key) {
